@@ -17,12 +17,14 @@ if (*format == 'c')
 char ch = va_arg(p, int);
 _putchar(ch);
 format++;
+i++;
 }
 else if (*format == 's')
 {
 char *ch = va_arg(p, char *);
 write(1, ch, strlen(ch));
 format++;
+i++;
 }
 
 }

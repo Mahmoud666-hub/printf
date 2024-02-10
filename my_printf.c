@@ -27,6 +27,7 @@ format++;
 else if (*format == '%')
 {
 _putchar('%');
+format++;
 }
 
 }

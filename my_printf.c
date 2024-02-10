@@ -15,17 +15,17 @@ if (*format == '%')
 if (*format == 'c')
 {
 char ch = va_arg(p, int);
-putchar(ch);
+_putchar(ch);
 format++;
 }
 else if (*format == 's')
 {
 char *ch = va_arg(p, char *);
-puts(ch);
+write(1, ch, strlen(ch));
 format++;
 }
 }
-putchar(*format);
+_putchar(*format);
 format++;
 i++;
 }

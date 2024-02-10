@@ -24,6 +24,11 @@ char *ch = va_arg(p, char *);
 write(1, ch, strlen(ch));
 format++;
 }
+else if (*format == '%')
+{
+_putchar('%');
+}
+
 }
 _putchar(*format);
 format++;

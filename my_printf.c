@@ -8,7 +8,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, x = 0, r = 0, q = 0;
+	int i = 0, x = 0, r = 0, q = 0, k = 0;
 	char *s = NULL;
 	char ch;
 	va_list p;
@@ -23,25 +23,28 @@ while (format[x] != '\0')
 		{
 			ch = va_arg(p, int);
 			_putchar(ch);
-			q++;
-			if ((format[x + 1]) == '\0')
+			
+			if ((format[x + 2]) == '\0')
 			{
 				i++;
+				/*printf("i--(%d)--\n", i);*/
 				break;
 			}
+			q++;
 			x++;
 		}
 		else if (format[x + 1] == 's')
 		{
 			s = va_arg(p, char *);
-			r = roo(s);
+			k = roo(s);
 			_putchar('\0');
 		/*write(1, s, (1 + strlen(s)));*/
-			if ((format[x + 1]) == '\0')
+			if ((format[x + 2]) == '\0')
 			{
-				i++;
+				i = i + k;
 				break;
 			}
+			r = k;
 			x++;
 		}
 		x++;
@@ -56,6 +59,6 @@ i++;
 
 
 va_end(p);
-
+/*printf("(i)--%d--(r)--%d--(q)--%d\n", i, r, q);*/
 return (i + r + q);
 }

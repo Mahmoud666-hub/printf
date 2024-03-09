@@ -1,0 +1,12 @@
+/********/
+void main()
+{
+	int x = 0, y = 0;
+	x = _printf("Complete the sentence:%c # %s\n", 'k', "sorry");
+	
+	printf("\n-----------------\n");
+	/*printf("\nx--%d\n", x);*/
+	y = printf("Complete the sentence:%c # %s\n", 'k', "sorry");
+	printf("\n");
+	printf("x--%d--y--%d\n", x, y);
+}

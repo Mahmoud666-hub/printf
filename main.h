@@ -10,6 +10,8 @@
 
 void _putchar(char ch);
 
+int _string(char *s);
+
 int _printf(const char *format, ...);
 
 #endif

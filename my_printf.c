@@ -63,7 +63,7 @@ x++;
 
 
 va_end(p);
-printf("(i)--%d--(r)--%d--(q)--%d--\n", i, r, q);
+/*printf("(i)--%d--(r)--%d--(q)--%d--\n", i, r, q);*/
 /*i++;*/
 return (i + r + q);
 }

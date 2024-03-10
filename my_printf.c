@@ -8,17 +8,31 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, x = 0, r = 0, q = 0, k = 0;
+	int i = 0, x = 0, r = 0, q = 0, k = 0, n = 0;
 	char *s = NULL;
 	char ch;
 	va_list p;
+
+	/*if ((format[0] == '%' && format[1] == '\0'))*/
+	/*{*/
+		/*return (1);*/
+	/*}*/
+	if (format == NULL)
+	{
+		return (1);
+	}
+	
 
 va_start(p, format);
 
 while (format[x] != '\0')
 {
 	if (format[x] == '%')
-	{x++;
+	{x++;if (format[x] == '%')
+		{
+			_putchar('%');
+			n++;
+		}
 		if (format[x] == 'c')
 		{
 			ch = va_arg(p, int);
@@ -65,5 +79,5 @@ x++;
 va_end(p);
 /*printf("(i)--%d--(r)--%d--(q)--%d--\n", i, r, q);*/
 /*i++;*/
-return (i + r + q);
+return (i + r + q + n);
 }

@@ -65,3 +65,16 @@ int main()
 
 	return (0);
 }
+
+int main()
+{
+	int x = 0, y = 0;
+
+	/*printf("\n-----------------\n");*/
+	/*printf("\nx--%d\n", x);*/
+	x = _printf(NULL);
+	/*printf("\n");*/
+	y = printf(NULL);
+	printf("x--%d--y--%d\n", x, y);
+	return (0);
+}

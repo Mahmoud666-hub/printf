@@ -24,7 +24,6 @@ while (format[x] != '\0')
 			ch = va_arg(p, int);
 			_putchar(ch);
 			q++;
-			i--;
 			if ((format[x + 1]) == '\0')
 			{
 				/*printf("i--(%d)--\n", i);*/
@@ -39,7 +38,6 @@ while (format[x] != '\0')
 			{
 				k = roo("(null)");
 				r = r + k;
-				i--;
 			}
 			else
 			{
@@ -47,19 +45,17 @@ while (format[x] != '\0')
 			/*printf("k--(%d)--\n", k);*/
 			_putchar('\0');
 			r = r + k;
-			i--;
 			}
 		/*write(1, s, (1 + strlen(s)));*/
 			if ((format[x + 1]) == '\0')
 			{
 				break;
 			}
-			i--;
 		}
 	}
-	else
+	else{
 _putchar(format[x]);
-i++;
+i++;}
 /*write(1, &format[x], 1);*/
 x++;
 /*printf("--(%d)--\n", i);*/
@@ -67,7 +63,7 @@ x++;
 
 
 va_end(p);
-/*printf("(i)--%d--(r)--%d--(q)--%d--\n", i, r, q);*/
-i++;
+printf("(i)--%d--(r)--%d--(q)--%d--\n", i, r, q);
+/*i++;*/
 return (i + r + q);
 }
